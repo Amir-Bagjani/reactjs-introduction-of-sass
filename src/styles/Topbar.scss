@@ -1,0 +1,66 @@
+@import "../index.scss";
+
+.header {
+  @include  set-color-background($primary-color);
+//   height: 600px;
+
+  .container {
+    max-width: 1100px;
+    padding: 0 30px;
+    margin: 0 auto;
+    overflow: auto;
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 80px;
+
+      h1 {
+        cursor: pointer;
+      }
+
+      ul {
+        display: flex;
+        gap: 5px;
+
+        a {
+          color: set-color($primary-color);
+          padding: 8px 15px;
+          border-radius: 4px;
+
+          &:hover {
+            background-color: lighten($primary-color, 10%);
+          }
+        }
+      }
+    }
+
+    .content {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 50%;
+        transition: transform 200ms;
+
+        &:hover{
+            transform: translateY(-4px);
+        }
+      }
+
+      h1 {
+        font-size: 50px;
+        line-height: 1.2;
+      }
+
+      a {
+        margin-right: 15px;
+      }
+    }
+  }
+}
+
+@import '_mobile'
